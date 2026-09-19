@@ -22,6 +22,7 @@ Thumbs.db
 # Student rosters, attendance records, and generated outputs
 *.xls
 *.xlsx
+!考勤表.xlsx
 *.csv
 data/
 output/
