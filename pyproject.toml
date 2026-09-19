@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "excel-attendance-tool"
+version = "1.0.0"
+description = "Merge seat-layout Excel attendance sheets into a student roster."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "openpyxl>=3.1,<4",
+  "pandas>=2.0,<3",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business",
+]
+
+[project.scripts]
+attendance-tool = "attendance_tool.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["attendance_tool*"]
